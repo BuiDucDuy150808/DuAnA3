@@ -14,4 +14,4 @@ File css.css: màu xanh – kem – cam, bố cục chia cột, có responsive b
 Tài liệu: README.md, AI_LOG.md, CHANGELOG.md, RELEASE.md.
 Thay đổi
 Rà soát lại cấu trúc HTML.
-[Giữ dòng này nếu đã dùng bản CSS mới] Đơn giản hóa CSS: dùng biến màu, gộp selector trùng, bổ sung style còn thiếu cho phần đầu trang (có hỗ trợ AI, xem AI_LOG.md).
+Đơn giản hóa CSS: dùng biến màu, gộp selector trùng, bổ sung style còn thiếu cho phần đầu trang (có hỗ trợ AI, xem AI_LOG.md).
