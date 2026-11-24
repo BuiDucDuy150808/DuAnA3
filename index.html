@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+576y:O?&*Lp-ơ+"ed43sư21q2ư3e4r5<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#354B32">
+    <meta name="description" content="Mây Fruits - trái cây nhập khẩu, giỏ quà trái cây và thiết kế quà theo yêu cầu tại Hải Phòng.">
     <title>Mây Fruits | Trái cây nhập khẩu, giỏ quà cao cấp</title>
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Bỏ qua phần điều hướng</a>
 
-    <header>
+    <header class="site-header">
         <a href="#home" class="logo">✿ MÂY FRUITS</a>
-        <nav>
+        <nav aria-label="Điều hướng chính">
             <a href="#home">Trang chủ</a>
             <a href="#about">Về chúng tôi</a>
             <a href="#gifts">Giỏ quà</a>
@@ -19,17 +22,18 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <section id="home" class="row">
         <div>
             <h1>Chọn lành, trao ngon</h1>
             <p>Trái cây tươi ngon cùng lời chúc và sự quan tâm gửi đến người thân yêu.</p>
             <a href="#gifts" class="button">Khám phá giỏ quà</a>
         </div>
-        <img src="assets/anhdaidien-clean.png" alt="Logo Mây Fruits">
+        <img src="assets/anhdaidien-clean.png" alt="Logo Mây Fruits" width="350" height="350">
     </section>
 
     <section id="about" class="row">
-        <img src="assets/hoa qua cac loai.png" alt="Các loại trái cây tươi">
+        <img src="assets/hoa qua cac loai.png" alt="Các loại trái cây tươi" width="350" height="350" loading="lazy">
         <div>
             <h2>Một món quà nhỏ, mang yêu thương lớn</h2>
             <p>
@@ -46,19 +50,19 @@
 
         <div class="cards">
             <div class="card">
-                <img src="assets/giothinhvuong..jpg" alt="Giỏ quà An Nhiên">
+                <img src="assets/giothinhvuong..jpg" alt="Giỏ quà An Nhiên" width="400" height="220" loading="lazy">
                 <h3>Giỏ quà An Nhiên</h3>
                 <p>Trái cây tươi hài hòa, gửi lời chúc bình an và sức khỏe.</p>
             </div>
 
             <div class="card">
-                <img src="assets/giothinhvuong.jpg" alt="Giỏ quà Thịnh Vượng">
+                <img src="assets/giothinhvuong.jpg" alt="Giỏ quà Thịnh Vượng" width="400" height="220" loading="lazy">
                 <h3>Giỏ quà Thịnh Vượng</h3>
                 <p>Món quà tinh tế cho dịp chúc mừng, khai trương, thăm hỏi và tri ân.</p>
             </div>
 
             <div class="card">
-                <img src="assets/gioyeuthuong.jpg" alt="Giỏ quà Yêu Thương">
+                <img src="assets/gioyeuthuong.jpg" alt="Giỏ quà Yêu Thương" width="400" height="220" loading="lazy">
                 <h3>Giỏ quà Yêu Thương</h3>
                 <p>Vị ngọt gửi đến gia đình, bạn bè và người thân yêu.</p>
             </div>
@@ -71,25 +75,25 @@
 
         <div class="cards">
             <div class="card">
-                <img src="assets/images.jpg" alt="Táo Envy">
+                <img src="assets/images.jpg" alt="Táo Envy" width="400" height="220" loading="lazy">
                 <h3>Táo Envy</h3>
                 <p>Giòn ngọt, tươi ngon</p>
             </div>
 
             <div class="card">
-                <img src="assets/nhosua2.jpg" alt="Nho Japan">
+                <img src="assets/nhosua2.jpg" alt="Nho Japan" width="400" height="220" loading="lazy">
                 <h3>Nho Japan</h3>
                 <p>Ngọt thanh, mọng nước</p>
             </div>
 
             <div class="card">
-                <img src="assets/images (1).jpg" alt="Quýt Australia">
+                <img src="assets/images%20(1).jpg" alt="Quýt Australia" width="400" height="220" loading="lazy">
                 <h3>Quýt Australia</h3>
                 <p>Thơm ngon, giàu vitamin</p>
             </div>
 
             <div class="card">
-                <img src="assets/kiwivang.jpg" alt="Kiwi vàng New Zealand">
+                <img src="assets/kiwivang.jpg" alt="Kiwi vàng New Zealand" width="400" height="220" loading="lazy">
                 <h3>Kiwi vàng New Zealand</h3>
                 <p>Chua ngọt, tươi mát</p>
             </div>
@@ -104,7 +108,7 @@
             <p><b>Dịch vụ:</b> Trái cây nhập khẩu, giỏ quà trái cây, thiết kế theo yêu cầu</p>
         </div>
 
-        <form action="#contact">
+        <form id="order-form" action="#contact">
             <label>
                 Họ và tên
                 <input type="text" name="name" placeholder="Nhập họ tên của bạn" required>
@@ -112,7 +116,7 @@
 
             <label>
                 Số điện thoại
-                <input type="tel" name="phone" placeholder="Nhập số điện thoại liên hệ" required>
+                <input type="tel" name="phone" placeholder="Nhập số điện thoại liên hệ" pattern="[0-9]{9,15}" required>
             </label>
 
             <label>
@@ -125,9 +129,11 @@
                 <textarea name="note" rows="3" placeholder="Số lượng, ngân sách, thời gian giao"></textarea>
             </label>
 
-            <button class="button">Gửi yêu cầu đặt hàng</button>
+            <button class="button" type="submit">Gửi yêu cầu đặt hàng</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
         </form>
     </section>
+    </main>
 
     <footer>
         <p><b>✿ MÂY FRUITS</b></p>
@@ -135,5 +141,6 @@
         <p>© 2026 Mây Fruits/Thao Den/BuiDucDuy</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

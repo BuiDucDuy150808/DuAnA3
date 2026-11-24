@@ -15,10 +15,25 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, "Segoe UI", sans-serif;
     background: var(--cream);
     color: var(--green);
     line-height: 1.6;
+}
+
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 100;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 6px;
+    transform: translateY(-150%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
 }
 
 a {
@@ -49,7 +64,10 @@ p {
     margin-bottom: 15px;
 }
 
-header {
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +75,7 @@ header {
     gap: 15px;
     padding: 15px 30px;
     background: white;
+    box-shadow: 0 2px 12px rgba(53, 75, 50, 0.08);
 }
 
 .logo {
@@ -70,7 +89,12 @@ nav {
     gap: 20px;
 }
 
-nav a:hover {
+nav a {
+    padding: 6px 0;
+}
+
+nav a:hover,
+nav a:focus-visible {
     color: var(--orange);
 }
 
@@ -78,6 +102,7 @@ section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 60px 20px;
+    scroll-margin-top: 80px;
 }
 
 .center {
@@ -99,6 +124,9 @@ section {
 
 .row img {
     width: 350px;
+    max-height: 350px;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
 }
 
@@ -114,8 +142,17 @@ section {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
     background: var(--orange);
+}
+
+.button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(217, 139, 72, 0.45);
+    outline-offset: 3px;
 }
 
 .cards {
@@ -127,10 +164,11 @@ section {
 
 .card {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 6px 18px rgba(53, 75, 50, 0.08);
 }
 
 .card img {
@@ -164,6 +202,18 @@ textarea {
     font-weight: normal;
 }
 
+input:user-invalid,
+textarea:user-invalid {
+    border-color: #B13A3A;
+}
+
+.form-status {
+    min-height: 24px;
+    margin: 12px 0 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
 footer {
     padding: 30px 20px;
     background: var(--green);
@@ -173,4 +223,72 @@ footer {
 
 footer p {
     margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        position: static;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 14px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 42px 16px;
+        scroll-margin-top: 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .row {
+        gap: 24px;
+    }
+
+    .row div,
+    .row form,
+    .row img {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .row img {
+        width: 100%;
+        max-height: none;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .card img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 380px) {
+    nav {
+        gap: 8px 10px;
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
