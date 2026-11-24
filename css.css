@@ -1,3 +1,4 @@
+
 :root {
     --green: #354B32;
     --orange: #D98B48;
@@ -183,10 +184,34 @@ a:focus-visible {
     padding: 0 15px;
 }
 
+/* Biểu mẫu đặt hàng */
+
+#order-form {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(53, 75, 50, 0.08);
+}
+
+.form-title {
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+
+.form-description {
+    margin-bottom: 20px;
+    color: #66745F;
+    font-size: 14px;
+}
+
 label {
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
+}
+
+.required {
+    color: #B13A3A;
 }
 
 input,
@@ -202,16 +227,27 @@ textarea {
     font-weight: normal;
 }
 
+input:focus,
+textarea:focus {
+    border-color: var(--green);
+}
+
 input:user-invalid,
 textarea:user-invalid {
     border-color: #B13A3A;
 }
 
-.form-status {
-    min-height: 24px;
-    margin: 12px 0 0;
-    color: var(--green);
-    font-weight: bold;
+#order-form small {
+    display: block;
+    margin-top: 5px;
+    color: #6B8065;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#order-form .button {
+    width: 100%;
+    margin-top: 5px;
 }
 
 footer {
@@ -279,6 +315,10 @@ footer p {
 
     .card img {
         height: 240px;
+    }
+
+    #order-form {
+        padding: 20px;
     }
 }
 
