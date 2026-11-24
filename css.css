@@ -1,0 +1,176 @@
+:root {
+    --green: #354B32;
+    --orange: #D98B48;
+    --cream: #F8F7F1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--green);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 30px;
+    background: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.row div,
+.row form {
+    flex: 1;
+    min-width: 280px;
+}
+
+.row img {
+    width: 350px;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 30px;
+    background: var(--green);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--orange);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3,
+.card p {
+    padding: 0 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+footer {
+    padding: 30px 20px;
+    background: var(--green);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
